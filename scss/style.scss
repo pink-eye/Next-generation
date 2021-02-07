@@ -1,0 +1,121 @@
+@import "_header";
+@import "_shape";
+@import "_speech";
+@import "_advantages";
+@import "_everything";
+@import "_hood";
+@import "_blog";
+@import "_footer";
+@import "_popup";
+
+* {
+	font-family: 'Roboto';
+	transition: all .3s ease-in-out 0s;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.container {
+	width: 100%;
+	max-width: 1050px;
+	min-width: 320px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+body {
+	position: relative;
+}
+
+.chat {
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 60px;
+	width: 60px;
+	border-radius: 6px;
+
+	background-color: #47474c;
+
+	cursor: pointer;
+	transform: perspective(1px) translateZ(0);
+
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+
+	@media (min-width: 993px) {
+		&:hover,
+		&:focus,
+		&:active {
+			animation-name: hvr-push;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 1;
+		}
+	}
+}
+
+@keyframes hvr-push {
+	50% {
+		transform: scale(0.8);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.title {
+	font-size: 32px;
+	@media (max-width: 1010px) {
+		font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1010 - 320)));
+	}
+	color: #fff;
+}
+
+.text {
+	font-size: 32px;
+	@media (max-width: 1010px) {
+		font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1010 - 320)));
+	}
+	color: #8e8e98;
+}
+
+.caption {
+	font-size: 14px;
+	line-height: 21px;
+	color: #8e8e98;
+
+	@media (max-width: 1010px) {
+		font-size: calc(12px + (14 - 12) * ((100vw - 320px) / (1010 - 320)));
+	}
+
+	&_link {
+		color: #196cfa;
+
+		cursor: pointer;
+	}
+}
