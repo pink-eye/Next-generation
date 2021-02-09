@@ -115,13 +115,12 @@
 		}
 
 		font-size: 14px;
+		.footer__link {
+			position: relative;
 
-		@media (min-width: 993px) {
-			.footer__link {
-				position: relative;
-
-				color: #55555b;
-				&::before {
+			color: #55555b;
+			@media (min-width: 993px) {
+				&:before {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -132,18 +131,18 @@
 					transition: max-height 0.5s;
 				}
 				&:hover {
-					&::before {
+					&:before {
 						max-height: 100%;
 					}
 				}
 			}
 		}
-			// .footer__item_head
 
-			&_head {
-				margin: 0px 0px 10px 0px !important;
-				color: #8e8e98;
-			}
+		// .footer__item_head
+
+		&_head {
+			margin: 0px 0px 10px 0px !important;
+			color: #8e8e98;
 		}
 	}
-
+}

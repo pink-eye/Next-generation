@@ -121,6 +121,11 @@
 	&__shell {
 		display: flex;
 		align-items: center;
+
+		@media (max-width: 450px) {
+			flex-direction: column;
+			row-gap: 15px;
+		}
 	}
 
 	// .header__field
@@ -140,6 +145,12 @@
 		color: #fff;
 
 		background: rgba(142, 142, 152, 0.2);
+
+		@media (max-width: 450px) {
+			max-width: 100%;	
+			border-radius: 8px;
+		}
+
 	}
 
 	// .header__btn
@@ -157,6 +168,11 @@
 
 		font-size: 14px;
 		color: #fff;
+
+		@media (max-width: 450px) {
+			max-width: 100%;	
+			border-radius: 8px;
+		}
 	}
 
 	// .header__note
